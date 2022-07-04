@@ -18,7 +18,8 @@ upgrade.onclick = () => {
     game.clicks -= upgradeCost
     game.perClick += 1
     upgradeCost *= 1.25
-    upgrade.innerText = `Upgrade $${upgradeCost}`
+    upgrade.innerText = `Upgrade $${upgradeCost.toFixed(2)}`
+    amount.innerText = `${game.clicks} Clicks`
   }
 }
 
