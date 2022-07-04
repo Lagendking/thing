@@ -41,12 +41,4 @@ upgrade1.onclick = () => {
   }
 }
 
-const givecps = () => {
-  while (1 < 2) {
-    await sleep(1000)
-    game.clicks += game.perSecond
-  }
-}
-givecps()
-
 console.log("5:16:48")
