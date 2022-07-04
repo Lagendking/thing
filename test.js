@@ -3,12 +3,8 @@ const amount = document.getElementById("amount")
 const upgrade = document.getElementById("upgrade")
 const upgrade1 = document.getElementById("upgrade1")
 
-function sleep(milliseconds) {
-  const date = Date.now()
-  let currentDate = null
-  do {
-    currentDate = Date.now()
-  } while (currentDate - date < milliseconds)
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 const game = {
@@ -47,8 +43,7 @@ upgrade1.onclick = () => {
 
 const givecps = () => {
   while (1<2) {
-    sleep(100)
-    game.clicks += game.perSecond
+    sleep(100).then(() => {game.clicks += game.perSecond})
   }
 }
 
