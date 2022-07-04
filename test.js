@@ -22,3 +22,5 @@ const clearScore = () => {
 
 const clrbutton = document.getElementById("clear")
 clrbutton.onclick = () => clearScore()
+
+console.log("5:16:48")
