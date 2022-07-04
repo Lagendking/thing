@@ -14,4 +14,4 @@ blueBox.onclick = () => {
   console.log("blue")
 }
 
-const Buttons = document.querySelectorAll(".Button")
+const Buttons = document.querySelectorAll(".Clicky")
