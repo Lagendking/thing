@@ -9,5 +9,8 @@ const clickAmount = {
 }
 const Buttons = document.querySelectorAll(".Clicky")
 Buttons.forEach(clicker => {
-  clicker.onclick = () => console.log(clicker.value)
+  clicker.onclick = () => {
+    console.log(clicker.value)
+    clickAmount[clicker.value] += 1
+  }
 })
