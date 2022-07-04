@@ -12,5 +12,6 @@ Buttons.forEach(clicker => {
   clicker.onclick = () => {
     console.log(clicker.value)
     clickAmount[clicker.value] += 1
+    clicker.innerText = clickAmount[clicker.value]
   }
 })
