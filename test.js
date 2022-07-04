@@ -1,26 +1,12 @@
-const clickAmount = {
-  "red": 0,
-  "green": 0,
-  "blue": 0,
+const clicker = document.getElementById("clicker")
+
+const game = {
+  "clicks": 0,
+  "perClick": 0,
 }
 
-const Buttons = document.querySelectorAll(".Clicky")
-Buttons.forEach(clicker => {
-  clicker.onclick = () => {
-    console.log(clicker.value)
-    clickAmount[clicker.value] += 1
-    clicker.innerText = clickAmount[clicker.value]
-  }
-})
-
-const clearScore = () => {
-  Buttons.forEach(clicker => {
-    clickAmount[clicker.value] = 0
-    clicker.innerText = 0
-  })
+clicker.onclick = () => {
+  game.clicks += game.perClick
 }
-
-const clrbutton = document.getElementById("clear")
-clrbutton.onclick = () => clearScore()
 
 console.log("5:16:48")
