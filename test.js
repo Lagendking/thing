@@ -12,14 +12,14 @@ clicker.onclick = () => {
   amount.innerText = `${game.clicks.toFixed(2)} Clicks`
 }
 
-upgradeCost = Number(upgrade.value)
+upgradeCost = Number(upgrade.value).toFixed(2)
 upgrade.onclick = () => {
   if (game.clicks >= upgradeCost) {
     game.clicks -= upgradeCost
     game.perClick += 1
     upgradeCost *= 1.25
     upgrade.innerText = `Upgrade $${upgradeCost.toFixed(2)}`
-    amount.innerText = `${game.clicks} Clicks`
+    amount.innerText = `${game.clicks.toFixed(2)} Clicks`
   }
 }
 
