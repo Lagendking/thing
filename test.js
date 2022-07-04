@@ -3,12 +3,12 @@ const amount = document.getElementById("amount")
 
 const game = {
   "clicks": 0,
-  "perClick": 0,
+  "perClick": 1,
 }
 
 clicker.onclick = () => {
   game.clicks += game.perClick
-  amount.innerText(game.clicks)
+  amount.innerText = game.clicks
 }
 
 console.log("5:16:48")
