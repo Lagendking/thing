@@ -13,10 +13,9 @@ Buttons.forEach(clicker => {
   }
 })
 
-const clrbutton = document.getElementById("clear")
-
-clrbutton.onclick = () => clearScore()
-  
 const clearScore = () => {
   Buttons.forEach(clicker => clickAmount[clicker.value] = 0
 }
+
+const clrbutton = document.getElementById("clear")
+clrbutton.onclick = () => clearScore()
