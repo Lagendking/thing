@@ -11,10 +11,11 @@ clicker.onclick = () => {
   amount.innerText = game.clicks
 }
 
+clicktext = Number(amount.value)
 amount.onclick = () => {
-  if (game.clicks >= amount.value) {
-    game.clicks -= amount.value
-    amount.value *= 1.25
+  if (game.clicks >= clicktext) {
+    game.clicks -= clicktext
+    clicktext *= 1.25
     game.perClick += 1
   }
 }
