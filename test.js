@@ -3,10 +3,6 @@ const amount = document.getElementById("amount")
 const upgrade = document.getElementById("upgrade")
 const upgrade1 = document.getElementById("upgrade1")
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 const game = {
   "clicks": 0,
   "perClick": 1,
