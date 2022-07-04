@@ -38,16 +38,16 @@ upgrade.onclick = () => {
 upgrade1.onclick = () => {
   if (game.clicks >= upgrade1Cost) {
     game.clicks -= upgrade1Cost
-    game.perSecond += 0.1
+    game.perSecond += 1
     upgrade1Cost *= 1.25
-    upgrade1.innerText = `cps +0.1 | ${upgrade1Cost.toFixed(2)}`
+    upgrade1.innerText = `cps +1 | ${upgrade1Cost.toFixed(2)}`
     amount.innerText = `${game.clicks.toFixed(2)} Clicks`
   }
 }
 
 const givecps = () => {
   while (1<2) {
-    sleep(1000)
+    sleep(100)
     game.clicks += game.perSecond
   }
 }
