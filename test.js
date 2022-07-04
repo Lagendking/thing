@@ -39,8 +39,7 @@ upgrade1.onclick = () => {
 
 const givecps = () => {
   while (1<2) {
-    await setTimeout(1)
-    game.clicks += game.perSecond
+    setTimeout =(() => {game.clicks += game.perSecond}, 1000)
   }
 }
 
