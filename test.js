@@ -4,5 +4,5 @@ let blueBox = document.getElementById("blue")
 
 const Buttons = document.querySelectorAll(".Clicky")
 Buttons.forEach(clicker => {
-  clicker.onclick => console.log(clicker.value)
+  clicker.onclick = () => console.log(clicker.value)
 })
