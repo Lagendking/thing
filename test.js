@@ -1,5 +1,6 @@
 const clicker = document.getElementById("clicker")
 const amount = document.getElementById("amount")
+const upgrade = document.getElementById("upgrade")
 
 const game = {
   "clicks": 0,
@@ -11,12 +12,13 @@ clicker.onclick = () => {
   amount.innerText = game.clicks
 }
 
-clicktext = Number(amount.value)
-amount.onclick = () => {
-  if (game.clicks >= clicktext) {
-    game.clicks -= clicktext
-    clicktext *= 1.25
+upgradeCost = Number(upgrade.value)
+upgrade.onclick = () => {
+  if (game.clicks >= upgradeCost) {
+    game.clicks -= upgradeCost
     game.perClick += 1
+    upgradeCost *= 1.25
+    upgrade.innerText = `Upgrade $${upgradeCost}`
   }
 }
 
