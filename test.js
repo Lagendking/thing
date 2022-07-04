@@ -41,4 +41,9 @@ upgrade1.onclick = () => {
   }
 }
 
+const givecps = setInterval(function() {
+  game.clicks += game.perSecond 
+  amount.innerText = `${game.clicks.toFixed(2)} Clicks`
+}, 1000);
+
 console.log("5:16:48")
