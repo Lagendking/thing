@@ -11,4 +11,12 @@ clicker.onclick = () => {
   amount.innerText = game.clicks
 }
 
+amount.onclick = () => {
+  if (game.clicks >= amount.value) {
+    game.clicks -= amount.value
+    amount.value *= 1.25
+    game.perClick += 1
+  }
+}
+
 console.log("5:16:48")
