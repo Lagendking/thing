@@ -9,7 +9,7 @@ const game = {
 
 clicker.onclick = () => {
   game.clicks += game.perClick
-  amount.innerText = game.clicks
+  amount.innerText = `${game.clicks.toFixed(2)} Clicks`
 }
 
 upgradeCost = Number(upgrade.value)
