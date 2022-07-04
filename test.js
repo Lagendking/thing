@@ -8,7 +8,7 @@ const game = {
 
 clicker.onclick = () => {
   game.clicks += game.perClick
-  amount.innerText = game.clicks
+  amount.innerText(game.clicks)
 }
 
 console.log("5:16:48")
