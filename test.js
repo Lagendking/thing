@@ -13,3 +13,5 @@ greenBox.onclick = () => {
 blueBox.onclick = () => {
   console.log("blue")
 }
+
+const Buttons = document.querySelectorAll(".Button")
