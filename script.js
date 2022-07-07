@@ -15,12 +15,26 @@ let cost1 = Number(upgrade1.value)
 let cost2 = Number(upgrade2.value)
 let cost3 = Number(upgrade3.value)
 
+const format = (num) => {
+    let suf = ""
+    let newnum 
+    if (num < 1000) {newnum = num, suf = ""}
+    if (num >= 1e3) {newnum = num / 1e3, suf = "K"}
+    if (num >= 1e6) {newnum = num / 1e6, suf = "M"}
+    if (num >= 1e9) {newnum = num / 1e9, suf = "B"}
+    if (num >= 1e12) {newnum = num / 1e12, suf = "T"}
+    if (num >= 1e15) {newnum = num / 1e15, suf = "Qa"}
+    if (num >= 1e18) {newnum = num / 1e18, suf = "Qi"}
+    suf = newnum.toFixed(2) + suf
+    return suf
+}
+
 const update = () => {
-    clicks.innerText = `${game.clickAmount.toFixed(2)} Clicks`
-    cps.innerText = `${game.perSecond.toFixed(2)} Cps`
-    upgrade1.innerText = `+1 click | $${cost1.toFixed(2)}`
-    upgrade2.innerText = `+0.5 Cps | $${cost2.toFixed(2)}`
-    upgrade3.innerText = `+2.5 Cps | $${cost3.toFixed(2)}`
+    clicks.innerText = `${format(game.clickAmount)} Clicks`
+    cps.innerText = `${format(game.perSecond)} Cps`
+    upgrade1.innerText = `+1 click | $${format(cost1)}`
+    upgrade2.innerText = `+0.5 Cps | $${format(cost2)}`
+    upgrade3.innerText = `+2.5 Cps | $${format(cost3)}`
 }
 
 mainButton.onclick = () => {
