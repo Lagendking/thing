@@ -23,8 +23,11 @@ const format = (num) => {
     if (num >= 1e6) {newnum = num / 1e6, suf = "M"}
     if (num >= 1e9) {newnum = num / 1e9, suf = "B"}
     if (num >= 1e12) {newnum = num / 1e12, suf = "T"}
-    if (num >= 1e15) {newnum = num / 1e15, suf = "Qa"}
-    if (num >= 1e18) {newnum = num / 1e18, suf = "Qi"}
+    if (num >= 1e15) {newnum = num / 1e15, suf = "qa"}
+    if (num >= 1e18) {newnum = num / 1e18, suf = "qi"}
+    if (num >= 1e21) {newnum = num / 1e21, suf = "sx"}
+    if (num >= 1e24) {newnum = num / 1e24, suf = "sp"}
+    if (num >= 1e27) {newnum = num / 1e27, suf = "oc"}
     suf = newnum.toFixed(2) + suf
     return suf
 }
